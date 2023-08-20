@@ -6,7 +6,7 @@ module.exports = {
             return res.send('Response of Root Server')
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -16,7 +16,7 @@ module.exports = {
             res.status(201).json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -33,7 +33,7 @@ module.exports = {
             return res.status(201).json({msg: "Product registred"});
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -44,7 +44,7 @@ module.exports = {
             return res.json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -55,7 +55,7 @@ module.exports = {
             return res.json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -73,7 +73,7 @@ module.exports = {
             return res.status(201).json({msg: "Product updated"});
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -82,10 +82,10 @@ module.exports = {
             const {cod:prod_cod} = req.params;
             await knex('Product').where({prod_cod}).del();
 
-            return res.status(201).mesage("Product deleted");
+            return res.status(201).message("Product deleted");
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     }
 }
