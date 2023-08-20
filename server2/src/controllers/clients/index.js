@@ -6,7 +6,7 @@ module.exports = {
             return res.send("Response of Cliente Server");
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -16,7 +16,7 @@ module.exports = {
             res.status(201).json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -42,7 +42,7 @@ module.exports = {
             return res.json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -53,7 +53,7 @@ module.exports = {
             return res.json(result)
         }
         catch (error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -69,7 +69,7 @@ module.exports = {
             return res.status(201).json({msg: "Client updated"});
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     },
 
@@ -81,7 +81,7 @@ module.exports = {
             return res.status(201).json({msg: "Client Deleted"});
         }
         catch(error) {
-            return res.status(400).json({error: error.mesage});
+            return res.status(400).json({error: error.message});
         }
     }
 };
